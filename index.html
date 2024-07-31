@@ -24,11 +24,20 @@
     </div>
 
    <ul>
-    <li class="list-items">one</li>
+    <li class="list-items" onclick="light()" ondblclick="okay()">one</li>
     <li class="list-items">two</li>
     <li class="list-items">three</li>
    </ul>
 
     <!-- <script src="index.js"></script> -->
 </body>
+<script>
+    function light(){
+        document.querySelector('li').style.backgroundColor='red';
+    }
+    function okay(){
+        document.querySelector('li').style.backgroundColor='green',
+        document.querySelector('h1').style.backgroundColor='purple';
+    }
+</script>
 </html>
