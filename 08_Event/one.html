@@ -31,26 +31,50 @@
     
 </body>
 <script>
-     let img3=document.getElementById('img3');
-     img3.addEventListener("click",()=>{
-        alert("img3 clicked");
-        
 
-     },false);
+    //  let img3=document.getElementById('img3');
+    //  img3.addEventListener("click",()=>{
+    //     alert("img3 clicked");
+    //  },false);
+
+
+
      //attached event method
-
-     document.getElementById('img2').addEventListener("click",function(e){
-        alert("image 2 gets clicked")
-        console.log(e);
-     },false);
-
-    //  type of events
+     //  type of events
     // timestamps
     // defaultprevented
     //target
     // toelement, srcElement, curretTarget
     // clientX,clientY,screenY
-//   altkey,ctrkey,shiftkey, keyCode
+    //altkey,ctrkey,shiftkey, keyCode
+
+
+
+    // document.getElementById('images').addEventListener("click",function(e){
+    //     console.log(" get clicked");
+    //  },true);
+
+    //  document.getElementById('img2').addEventListener("click",function(e){
+    //     // alert("image2 gets clicked");
+    //     // console.log(e);
+    //     console.log("image2 gets clicked");
+    //     e.stopPropagation();
+    //  },true);
+
+    //  document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     // e.stopPropagation();
+    //     console.log("google clicked");
+    //  },false);
+
+     document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target);
+        console.log(e.target.parentNode);
+        if(e.target.tagName=='IMG'){
+            let removeIt=e.target.parentNode;
+        removeIt.remove();//to remove clicked element
+        }
+     },false);
 
 
 </script>

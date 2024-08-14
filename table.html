@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table with Delete Button</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        background-color: #414141;
+        color: #f4f4f4;
+      }
+      h1{
+        margin: 10px;
+        text-align: center;
+      }
+      fieldset{
+        width: 20%;
+        
+      }
+      form{
+        width: 89%;
+        background-color:cadetblue;
+      }
+
+      table {
+        width: 60%;
+        border-collapse: collapse;
+       
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: center;
+      }
+
+      th,
+      td {
+        padding: 15px;
+      }
+
+      th {
+        /* background-color: #f2f2f2; */
+        background-color: #414141;
+      }
+
+      .delete-btn {
+        background-color: #f41a13;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .delete-btn:hover {
+        background-color: #17031f;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  -->
+
+    <!-- <h1>Table task to remove Rows </h1> -->
+
+     <fieldset>
+        <legend><h1>Login page</h1></legend>
+        <form action="">
+            <table id="formTable">
+                <tr>
+                    <td><label for="fname">Username/mobileno</label>
+                    <input type="text" name="f_name" id="fname">
+                   </td>
+                </tr>
+                <tr>
+                    <td><label for="fname">Password</label>
+                    <input type="text" name="f_name" id="fname" value="">
+                   </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn">login</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+     </fieldset>
+
+
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>Sn.</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="sn">1</td>
+          <td>Chandan</td>
+          <td>23</td>
+          <td>Chennai</td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+        <tr>
+          <td class="sn">2</td>
+          <td>Ram</td>
+          <td>25</td>
+          <td>Rajasthan</td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+        <tr>
+          <td class="sn">3</td>
+          <td>Shyam</td>
+          <td>21</td>
+          <td>Seliyur</td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+        <tr>
+          <td class="sn">4</td>
+          <td>Mohan</td>
+          <td>24</td>
+          <td>Mohanpur</td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script>
+
+      function updateSerialNumbers() {
+            var table = document.getElementById('myTable');
+            var rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+            
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].getElementsByTagName('td')[0].innerText = i + 1;
+            }
+        }
+
+
+        var deleteButtons = document.getElementsByClassName('delete-btn');
+        for (var i = 0; i < deleteButtons.length; i++) {
+            deleteButtons[i].onclick = function() {
+                var row = this.parentNode.parentNode;
+                row.parentNode.removeChild(row);
+                updateSerialNumbers();
+            }
+        }
+  </script>
+</html>

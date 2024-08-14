@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hello{
+            background-color: white;
+            color: black;
+        }
+        .newClass{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // create a new button element ,give it a text "click me",backgroundColor as red and color as red;
+    let btn=document.createElement('button');
+    btn.innerText="click me";
+    btn.style.backgroundColor='red';
+    btn.style.color='white';
+    console.log(btn);
+    let body=document.querySelector('body');
+    body.prepend(btn);
+
+    // create a p tag in html ,give it a class and some styling.
+    // Now create a new class in css and try to append this class to the p element
+    // 
+
+    let para=document.createElement('p');
+    para.innerText="hello javascript";
+    let but=document.querySelector('button');
+    but.after(para);
+    para.setAttribute('class',"para-1");
+    para.style.backgroundColor='yellow';
+    para.style.textAlign='center';
+    // set attribute is used to overide the past attribute name or create new attribute;
+    para.setAttribute('class','hello')
+
+    // class list to add new attibute without deleting past attribute;
+   console.log( para.classList);
+   para.classList.add('newClass');
+</script>
+</html>

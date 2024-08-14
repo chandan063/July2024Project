@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #but{
+            border: 2px solid red;
+            background-color: #414141;
+            color: white;
+            padding: 10px;
+        }
+        #but>ul{
+            border: 2px solid green;
+            padding: 10px;
+        }
+        ul>li{
+            border: 2px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">hello</div>
+    <div class="box">world</div>
+    <div class="box">cake</div>
+
+
+
+    <div id="but">
+        <ul>
+            <li>item 1 </li>
+            <li>item 2 </li>
+            <li>item 3 </li>
+            <li>item 4 </li>
+            <li>item 5 </li>
+        </ul>
+    </div>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis iste obcaecati neque?</p>
+</body>
+<script>
+    let a=document.querySelectorAll('div');
+    console.log(a);
+    console.log(a[0].innerText);
+
+
+    // for getting attribute for any element
+    let att=document.querySelector('div');
+    let clas=att.getAttribute('class')
+    console.log(clas);
+
+    // for setting attribute values
+    att.setAttribute('class',"geee");
+
+
+    //for adding an element
+    let addbtn=document.createElement("button");
+    let addbtn1=document.createElement("button");
+    let addbtn2=document.createElement("button");
+    let addbtn3=document.createElement("button");
+    addbtn.innerText="add last button(append)";
+    addbtn1.innerText="add first button(prepand)";
+    addbtn2.innerText="click me(after)";
+    addbtn3.innerText="(before)";
+
+    console.log(addbtn);
+// for adding in last of any tree 
+    let cake=document.querySelector("#but");
+    console.log(cake);
+    cake.append(addbtn);
+// for adding in the first of any tree;
+  let cake1=document.querySelector("#but");
+  cake1.prepend(addbtn1);
+
+  let pro=document.querySelector('#but');
+  pro.after(addbtn2);
+  let pro1=document.querySelector('#but');
+  pro1.before(addbtn3)
+
+  let pro3=document.createElement('button');
+  pro3.innerText="i am king"
+  let paragr=document.getElementById('para')
+//   paragr.append(pro3);
+// paragr.prepend(pro3);
+// paragr.after(pro3);
+// paragr.before(pro3);
+
+
+// creating heading
+
+let newHead=document.createElement("h1");
+newHead.innerText="Hello javascript";
+newHead.style.color="blue";
+newHead.style.fontStyle='italic';
+att.before(newHead);
+
+// to delete the node
+let ppp=document.querySelector('#para');
+ppp.remove();
+
+
+
+</script>
+</html>
