@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: dodgerblue;
+            color: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- the change in the state of an object is known as Event
+         Events are fired to notify code of "intersting changes" that may affect code execution.
+         
+         >Mouse Event(click,dblclick,etc..)
+         >Keyboard events(keypress ,keyup,keydown)
+         >form events(submit etc.)
+         >print event & many more.
+    -->
+
+<!-- Inline event handling(writing the event in our html element is called) -->
+
+
+         <!-- <button onclick="console.log('button was clicked');alert('hello')">click me</button>
+         <button ondblclick="console.log('button was clicked twice')">click me 2 times</button>
+         <div onmouseover="console.log('clcikkkk')">This is a box</div> -->
+
+<!-- internal event  -->
+<button id="btn1">btn1</button>
+<button id="btn2">btn2</button>
+<div id="box">This is a box</div>
+
+
+
+<!-- Event Object
+    It is a  special object that has details about the event.
+    All event handlers have access to the Event Object's properties and methods.
+
+    node.event=(e)=>{
+    // handle here
+    }
+    e.target,e.type,e.clientX,e.clientY
+
+-->
+</body>
+
+<script>
+    let btn1=document.getElementById("btn1");
+    // btn1.ondblclick=()=>{
+    //     console.log("btn1 was clicked");
+    //     let a=24;
+    //     a++;
+    //     console.log(a);
+    // }
+    // if we write the above commented code again and change some data then the changed data will be shown in console as js willl treat it as overriden;
+    // to overcome this we use event handing;
+    btn1.onclick=(evt)=>{
+        console.log(evt.target);
+        console.log(evt.type);
+        console.log(evt.clientX);//give position
+        console.log(evt.clientY)//give position
+    }
+</script>
+</html>

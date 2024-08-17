@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button popup div</title>
+    <style>
+        body,html{
+            margin: 5px;
+            padding: 5px;
+            background-color: #414141;
+            color: white;
+        }
+        #btn{
+             background-color: red;
+             border: 2px solid black;
+             width: 10vw;
+             height: 5vw;
+        }
+        #box{
+            text-align: center;
+            font-size: larger;
+            font-style: oblique;
+            word-wrap: break-word;
+        }
+        #hidden-box{
+            display: none;
+            
+        }
+
+        #enter{
+            margin: 20px;
+            font-size: 30px;
+            color:chartreuse;
+        }
+        #para{
+            border: none;
+        }
+        #pbtn{
+            background-color: yellow;
+            border: none;
+            border-radius:5%;
+        }
+        .dis{
+            display: flex;
+            flex-wrap:wrap;
+            background-color: white;
+            color: black;
+            justify-content:space-evenly;
+            
+        }
+        #show{
+            margin-top: 50px;
+        }
+        .hell{
+        background-color: rgb(186, 230, 215);
+        font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, corporis veniam consequuntur doloremque quia eum rem vero odit, quaerat suscipit nam beatae optio. </div>
+    <button id="btn">More</button>
+
+     <div id="hidden-box">
+        <h1>hello</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero pariatur saepe unde facilis, inventore consequatur perspiciatis velit aut possimus est dicta deserunt adipisci odit ipsa praesentium quis eum nostrum nemo corrupti, accusamus id incidunt quae animi. Deserunt deleniti, dolore vitae quam maiores itaque.
+     </div><br>
+
+     <label for="para" id="enter">Enter no of para:</label><input type="text" id="para" placeholder="no of paragraphs">
+     <button id="pbtn">Generate</button>
+     <div id="show" class="dis"></div>
+</body>
+
+<script>
+    // let btn=document.getElementById('btn');
+    // btn.addEventListener("click",()=>{
+    //     let hidden=document.getElementById('hidden-box');
+    //     hidden.style.display='contents';
+
+    //     let ox=document.createElement('div');
+    //     ox.style.width='100px'
+    //     ox.style.height='100px'
+    //     ox.style.margin='10px'
+    //     ox.style.backgroundColor='aqua';
+    //     btn.before(ox);
+
+    // },false);
+
+    let ptbn=document.getElementById("pbtn");
+    ptbn.addEventListener("click",()=>{
+        let para=document.getElementById("para");
+        let value=para.value;
+        if(value!==null){
+            for(let i=0;i<value;i++){
+                let createPara=document.createElement('p');
+                createPara.classList='hell'
+                createPara.innerText=`paragraph ${i+1}`;
+                let show=document.getElementById("show")
+                show.append(createPara);
+            }
+        }
+        
+
+    })
+</script>
+</html>

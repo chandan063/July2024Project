@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+    <style>
+        body,html{
+            display: flex;
+        }
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Event Listiner
+
+        node.addEventListener(event,callback)
+        node.removeEventListener(event,callback)
+
+        Note--the callback reference should be same to remove;
+
+        Through event listner we can run same event and can get our work in different way.
+    -->
+
+    <button id="btn1">btn1</button>
+    <button id="btn2">btn2</button>
+    <div id="box">This is my box</div>
+    <button id="change">change mode</button>
+</body>
+<script>
+    let btn=document.getElementById("btn1");
+    btn.addEventListener("click",()=>{
+        console.log("handler 1");
+    });
+
+    // if we want to remove then we can store the event in a variable
+  
+    const cont2=()=>{
+        console.log("handler 2");
+    };
+    // after creating we stored it in vaiable and passed in addeventlistener
+    btn.addEventListener("click",cont2);
+    btn.removeEventListener("click",cont2);
+
+
+
+    btn.addEventListener("click",()=>{
+        console.log("handler 3");
+    });
+    btn.addEventListener("click",()=>{
+        console.log("handler 4");
+    });
+
+
+    // changing from 2 states in each other is called as toggling
+
+   let change=document.querySelector("#change");
+   let currmode="light";
+   change.addEventListener("click",()=>{
+    console.log(currmode);
+    if(currmode=="light"){
+        currmode="dark";
+        document.querySelector("body").style.backgroundColor='black';
+        
+    }
+    else{
+        currmode="light";
+        document.querySelector("body").style.backgroundColor='white';
+        
+    }
+
+   })
+</script>
+</html>

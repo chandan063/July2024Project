@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Creater</title>
+    <!-- <script src="https://kit.fontawesome.com/a26a16630d.js" crossorigin="anonymous"></script> -->
+    <style>
+        body,html{
+            margin: 5px;
+            padding: 5px;
+
+        }
+        #head{
+              border: 2px solid red;
+              padding: 10px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content:flex-start;
+              align-items: center;
+        }
+        #btn{
+            width: 7vw;
+            height: 7vh;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- header created for button and title -->
+    <header id="head">
+        <!-- add button -->
+        <button id="btn"><i class="fa-solid fa-plus" id="icon"></i>Add Note</button>
+        <!-- content or title -->
+        <h1 id="content">Create your own Notes</h1>
+    </header>
+    
+    <!-- div for  showing created para -->
+    <div id="show"></div>
+</body>
+<script src="script.js"></script>
+</html>
