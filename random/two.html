@@ -3,39 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note Creater</title>
-    <!-- <script src="https://kit.fontawesome.com/a26a16630d.js" crossorigin="anonymous"></script> -->
+    <title>Note Creator</title>
     <style>
-        body,html{
-            margin: 5px;
-            padding: 5px;
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
+        /* Header Styles */
+        #head {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        #head{
-              border: 2px solid red;
-              padding: 10px;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content:flex-start;
-              align-items: center;
+
+        #head h1 {
+            margin: 0;
+            font-size: 24px;
         }
-        #btn{
-            width: 7vw;
-            height: 7vh;
-            margin-right: 5px;
+
+        #btn {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
+
+        #btn:hover {
+            background-color: #ff4500;
+        }
+
+        /* Content Styles */
+        #show {
+            padding: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            background-color: #e0f7fa;
+            border: 2px solid #00bcd4;
+            padding: 15px;
+            border-radius: 4px;
+            max-width: 500px;
+            word-wrap: break-word;
+            font-size: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+       
     </style>
 </head>
 <body>
     <!-- header created for button and title -->
     <header id="head">
         <!-- add button -->
-        <button id="btn"><i class="fa-solid fa-plus" id="icon"></i>Add Note</button>
+        <button id="btn">Add Note</button>
         <!-- content or title -->
-        <h1 id="content">Create your own Notes</h1>
+        <h1 id="content">Create Your Own Notes</h1>
     </header>
     
-    <!-- div for  showing created para -->
+    <!-- div for showing created paragraphs -->
     <div id="show"></div>
 </body>
 <script src="script.js"></script>
