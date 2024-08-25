@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global and Local scope</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Global and local scope</h1>
+   
+</body>
+<script>
+    // let a=10;
+    // const b=20;
+    // var c=30;
+
+    let p=document.createElement("p");
+    let h=document.querySelector("h1");
+    h.after(p);
+    p.innerText=`let a=10;
+    const b=20;
+    var c=30;
+    console.log(a,b,c);
+    var always declared in glopal scope ;
+    better use let and constant;
+    `;
+
+    if(true){
+        let a=20;
+        const b=34;
+        var c=99;
+    }
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+    
+
+</script>
+</html>
