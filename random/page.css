@@ -1,0 +1,151 @@
+body,html{
+    margin: 10px;
+    padding: 10px;
+    
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+img{
+    width: 40vw;
+    height: 80vh;
+}
+/* ==================================login page start======================================== */
+/* login page  */
+.login-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30vw;
+    height: 42vh;
+    text-align: center;
+    margin-top: 10vw;
+}
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+.log{
+    text-decoration: none;
+    margin: 3px;
+}
+.log:hover{
+    color: blue;
+}
+/* =====================login page ends============================================== */
+
+
+/* =====================signup page ends============================================== */ 
+
+.signup-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30vw;
+    height: 50vh;
+    text-align: center;
+}
+
+.signup-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.signup-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.signup-container button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+/* =====================signup end================ */
+
+@media (max-width: 600px) {
+    body{
+        background-image: url("assets/man-8106958_960_720.webp");
+        color: white;
+    }
+    img{
+        display: none;
+    }
+    .login-container {
+        display: block;
+        width: 70vw;
+        height: 38vh;
+        
+    }
+    .signup-container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 70vw;
+        height: 40vh;
+        
+    }
+
+    
+}
